@@ -100,14 +100,13 @@ COLOR_veryDarkGray = {18, 18, 18}
 function onTick()
     ticks = ticks + 1
     isClicked = input.getBool(1)
+    touchX = input.getNumber(3)
+    touchY = input.getNumber(4)
 
     speedMPH = round(input.getNumber(7) * 2.23694 or 00)
     engRPS = round(input.getNumber(10))
     fuelValue = input.getNumber(8)
     engTemp = roundTo(input.getNumber(9), 1)
-
-    touchX = input.getNumber(3)
-    touchY = input.getNumber(4)
 
     speedMenuClicked = isMenuClicked(1, touchX, touchY)
     fuelMenuClicked = isMenuClicked(4, touchX, touchY)
